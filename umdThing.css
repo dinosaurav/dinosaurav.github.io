@@ -1,18 +1,12 @@
 .center {
     margin: auto;
-    width: 70%;
+    width: 800;
 }
 .fakeTextBox {
 	border: 1px;
 	width:100%;
 }
 .selector {
-	float: left;
-}
-.selected {
-	border: 1px solid;
-	float: right;
-	width: 60%;
 }
 .filterSection{
 	clear: both;
@@ -34,14 +28,24 @@
 }
 #tableDiv{
 	clear: both;
-    background-color: #b0a0e6;
+    background-color: #d6a0b0;
 }
 #filterDiv{
+	text-align: center;
 	clear: both;
-    background-color: #00ff00;
+    background-color: #d6a0b0;
+}
+h1{
+	font-size:150%;
+	margin: 10;
+}
+h3{
+	font-size:120%;
+	margin: 0;
 }
 body {
-    background-color: #b0f0e6;
+    font-family: "Calibri", Sans-Serif;
+    background-color: #e6e0b0;
 }
 table {
 	border: 1px solid;
