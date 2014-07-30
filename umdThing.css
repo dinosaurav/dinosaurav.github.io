@@ -1,0 +1,59 @@
+.center {
+    margin: auto;
+    width: 70%;
+}
+.fakeTextBox {
+	border: 1px;
+	width:100%;
+}
+.selector {
+	float: left;
+}
+.selected {
+	border: 1px solid;
+	float: right;
+	width: 60%;
+}
+.filterSection{
+	clear: both;
+}
+.dept {
+    width: 14%;
+}
+.courseNum {
+    width: 14%;
+}
+.courseTitle {
+    width: 40%;
+}
+.creds {
+    width: 13%;
+}
+.genEds {
+    width: 20%;
+}
+#tableDiv{
+	clear: both;
+    background-color: #b0a0e6;
+}
+#filterDiv{
+	clear: both;
+    background-color: #00ff00;
+}
+body {
+    background-color: #b0f0e6;
+}
+table {
+	border: 1px solid;
+    border-collapse: collapse;
+    width:100%;
+}
+th {
+	border: 1px solid;
+	padding: 1px;
+	text-align: center;
+}
+td {
+	text-align: left;
+	border: 1px solid;
+}
