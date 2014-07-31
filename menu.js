@@ -1,7 +1,0 @@
-function createBox(){
-	
-}
-
-function deleteBox(){
-	
-}
