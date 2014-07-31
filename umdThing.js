@@ -30,11 +30,11 @@ var s= "<tr><th class=\"dept\">Department<\/th><th class=\"courseNum\">Course Nu
 	var table = document.getElementById("courses");
 	for (var i = array.length - 1; i >= 0; i--) {
 		s=s+"<tr>";
-		s=s+"<td class=\"dept\"><div class=\"wow bounceIn\">"+array[i].department+"</div></td>";
-		s=s+"<td class=\"courseNum\"><a href=\""+array[i].link+"\"><div class=\"wow zoomIn\">"+array[i].courseNumber+"</div></td>";
-		s=s+"<td class=\"courseTitle\"><div class=\"wow lightSpeedIn\">"+array[i].title+"</div></td>";
-		s=s+"<td class=\"creds\"><div class=\"wow rotateIn\">"+array[i].credits+"</div></td>";	 
-		s=s+"<td class=\"genEds \"><div class=\"wow flipInX\">"+array[i].genEdString+"</div></td>";
+		s=s+"<td class=\"dept\">"+array[i].department+"</td>";
+		s=s+"<td class=\"courseNum\"><a href=\""+array[i].link+"\">"+array[i].courseNumber+"</td>";
+		s=s+"<td class=\"courseTitle\">"+array[i].title+"</td>";
+		s=s+"<td class=\"creds\">"+array[i].credits+"</td>";	 
+		s=s+"<td class=\"genEds \">"+array[i].genEdString+"</td>";
 		s=s+"</tr>";
 
 	};
