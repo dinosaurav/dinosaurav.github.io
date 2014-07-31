@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <body>
+    <div class="wow bounceInUp"> WOW </div>
+  </body>
+</html>
