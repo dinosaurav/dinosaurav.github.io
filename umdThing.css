@@ -28,12 +28,12 @@
 }
 #tableDiv{
 	clear: both;
-    background-color: #d6a0b0;
+    background-color: #ff7777;
 }
 #filterDiv{
 	text-align: center;
 	clear: both;
-    background-color: #d6a0b0;
+    background-color: #ffaa22;
 }
 h1{
 	font-size:150%;
@@ -45,7 +45,7 @@ h3{
 }
 body {
     font-family: "Calibri", Sans-Serif;
-    background-color: #e6e0b0;
+    background-color: #dddddd;
 }
 table {
 	border: 1px solid;
