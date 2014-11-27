@@ -6,22 +6,26 @@ function readTable(){
 	var table = JSON.parse(tableString);
 }
 
-function sortTable(array){
+function evaluateTable(array) {
 	var selection = document.getElementById("genEdSelector").value;
-	return array.sort(function (a,b) {
+
+	for (var i = array.length - 1; i>=0; i--) {
+		var a = array[i];
 		var aCheck = 0;
-		var bCheck = 0;
-		for (var i=0;i<a.genEds.length;i++){
-			if (a.genEds[i] === selection) {
+		for (var j = 0;j<a.genEds.length;j++){
+			if (a.genEds[j] === selection) {
 				aCheck++;
 			}
 		}
-		for (var i=0;i<b.genEds.length;i++){
-			if (b.genEds[i] === selection) {
-				bCheck++;
-			}
-		}
-		return aCheck*10 - bCheck*10 + a.genEds.length - b.genEds.length;
+		array[i].score = aCheck*10 + array[i].genEds.length;
+	}
+	return array;
+}
+
+function sortTable(array){
+	array = evaluateTable(array);
+	return array.sort(function (a,b) {
+		return a.score-b.score;
 	})
 }
 
