@@ -46,11 +46,13 @@ h3{
 body {
     font-family: "Calibri", Sans-Serif;
     background-color: #ffffff;
+    font-size: 18px;
 }
 table {
 	border: 1px solid;
     border-collapse: collapse;
     width:100%;
+    font-size: 18px;
 }
 th {
 	border: 1px solid;
