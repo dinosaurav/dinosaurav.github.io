@@ -1,53 +1,4 @@
-function loadTable(){
-	writeTable(sortTable(getTable()));
-}
-
-function readTable(){
-	var table = JSON.parse(tableString);
-}
-
-function evaluateTable(array) {
-	var selection = document.getElementById("genEdSelector").value;
-
-	for (var i = array.length - 1; i>=0; i--) {
-		var a = array[i];
-		var aCheck = 0;
-		for (var j = 0;j<a.genEds.length;j++){
-			if (a.genEds[j] === selection) {
-				aCheck++;
-			}
-		}
-		array[i].score = aCheck*10 + array[i].genEds.length;
-	}
-	return array;
-}
-
-function sortTable(array){
-	array = evaluateTable(array);
-	return array.sort(function (a,b) {
-		return a.score-b.score;
-	})
-}
-
-function writeTable(array){
-var s= "<tr><th class=\"dept\">Department<\/th><th class=\"courseNum\">Course Number<\/th><th class=\"courseTitle\">Title<\/th><th class=\"creds\">Credits<\/th><th class=\"genEds\">Gen Eds<\/th><\/tr>\n";
-	var table = document.getElementById("courses");
-	for (var i = array.length - 1; i >= 0; i--) {
-		s=s+"<tr>";
-		s=s+"<td class=\"dept\">"+array[i].department+"</td>";
-		s=s+"<td class=\"courseNum\"><a href=\""+array[i].link+"\">"+array[i].courseNumber+"</td>";
-		s=s+"<td class=\"courseTitle\">"+array[i].title+"</td>";
-		s=s+"<td class=\"creds\">"+array[i].credits+"</td>";	 
-		s=s+"<td class=\"genEds \">"+array[i].genEdString+"</td>";
-		s=s+"</tr>";
-
-	};
-	table.innerHTML = s;
-}
-
-//*
-function getTable(){
-	var s = [
+[
 { "department":"AASP" , "courseNumber":"AASP100", "title":"Introduction to African American Studies", "link":"https://ntst.umd.edu/soc/search?courseId=AASP100&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on", "credits":"3", "genEdString":" DSHS DVUP", "genEds":["DSHS","DVUP"]},
 { "department":"AASP" , "courseNumber":"AASP100H", "title":"Introduction to African American Studies", "link":"https://ntst.umd.edu/soc/search?courseId=AASP100H&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on", "credits":"3", "genEdString":" DSHS DVUP", "genEds":["DSHS","DVUP"]},
 { "department":"AASP" , "courseNumber":"AASP101", "title":"Public Policy and the Black Community", "link":"https://ntst.umd.edu/soc/search?courseId=AASP101&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on", "credits":"3", "genEdString":" DSHS", "genEds":["DSHS"]},
@@ -4318,7 +4269,4 @@ function getTable(){
 { "department":"WMST" , "courseNumber":"WMST799", "title":"Masters Thesis Research", "link":"https://ntst.umd.edu/soc/search?courseId=WMST799&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on", "credits":"1 - 6", "genEdString":"", "genEds":[]},
 { "department":"WMST" , "courseNumber":"WMST898", "title":"Pre-Candidacy Research", "link":"https://ntst.umd.edu/soc/search?courseId=WMST898&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on", "credits":"1 - 8", "genEdString":"", "genEds":[]},
 { "department":"WMST" , "courseNumber":"WMST899", "title":"Doctoral Dissertation Research", "link":"https://ntst.umd.edu/soc/search?courseId=WMST899&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on", "credits":"6", "genEdString":"", "genEds":[]}
-];
-	return s;
-}
-//*/
+]

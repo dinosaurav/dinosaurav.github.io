@@ -4,7 +4,7 @@
 }
 .fakeTextBox {
 	border: 1px;
-	width:100%;
+	width: 100%;
 }
 .selector {
 }
@@ -28,12 +28,12 @@
 }
 #tableDiv{
 	clear: both;
-    background-color: #ff7777;
+    background-color: #dddddd;
 }
 #filterDiv{
 	text-align: center;
 	clear: both;
-    background-color: #ffaa22;
+    background-color: #aaddff;
 }
 h1{
 	font-size:150%;
@@ -45,7 +45,7 @@ h3{
 }
 body {
     font-family: "Calibri", Sans-Serif;
-    background-color: #dddddd;
+    background-color: #ffffff;
 }
 table {
 	border: 1px solid;

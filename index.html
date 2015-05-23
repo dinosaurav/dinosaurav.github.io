@@ -1,15 +1,47 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="twitter:card" content="photo" />
-<meta name="twitter:site" content="@instagram" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="As a people, our eyebrows have always been of the 'fleek' #hotephistory #rp" />
-<meta name="twitter:image" content="http://photos-h.ak.instagram.com/hphotos-ak-xfa1/1889266_371852306308175_246841464_n.jpg" />
-<meta name="twitter:url" content="http://instagram.com/p/v6RmwtmyWH/" />
-<title>Page Redirection</title>
-</head>
-<body> If you are not redirected automatically, follow the <a href='http://instagram.com/p/v6RmwtmyWH/'>http://instagram.com/p/v6RmwtmyWH/</a> 
-</body> 
+	<title>UMD Gen Eds Sorter</title>
+	<link rel="stylesheet" type="text/css" href="umdThing.css">
+	</head>
+<body onload="loadTable()">
+	<div id="content" class="center">
+		<div id="filterDiv">
+			<div id="informationDiv">
+				<p><h1>Gen Ed Course Sorter</h3>
+					<h3>Made by <a href="https://github.com/dinosaurav">Saurav Das</a></h6>
+					<a href="http://www.gened.umd.edu/">Gen Ed Information</a>
+					<a href="https://ntst.umd.edu/soc/">UMD's schedule site</a></p>
+			</div><div id="genEdFilterDiv" class="filterSection">
+					<div class="selector">
+						<select id="genEdSelector">
+						<option value="default">Select GenEds</option>
+						<option value="FSAW">FSAW</option>
+						<option value="FSAR">FSAR</option>
+						<option value="FSMA">FSMA</option>
+						<option value="FSOC">FSOC</option>
+						<option value="FSPW">FSPW</option>
+						<option value="DSHS">DSHS</option>
+						<option value="DSHU">DSHU</option>
+						<option value="DSNS">DSNS</option>
+						<option value="DSNL">DSNL</option>
+						<option value="DSSP">DSSP</option>
+						<option value="DVCC">DVCC</option>
+						<option value="DVUP">DVUP</option>
+						<option value="SCIS">SCIS</option>
+						</select>
+					</div>
+					<button onclick = "loadTable()"> Sort </button>
+			</div>
+		</div>
+		<div id="tableDiv">
+			<table id="courses">
+				<td>Loading... JS required to view</td>
+			</table>
+		</div>
+		<div id="footer">
+			Made by <a href="https://github.com/dinosaurav">Saurav Das</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="umdThing.js"></script>
+</body>
 </html>
