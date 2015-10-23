@@ -14,6 +14,7 @@ import org.jsoup.select.Elements;
 public class CourseUMD {
 
 	final static long waitTime = 200;
+	final static String yearNum = "201601";
 
 	public static void main(String[] args) {
 		ArrayList<String> links = new ArrayList<>();
@@ -24,6 +25,7 @@ public class CourseUMD {
 			process(link, courses);
 			sleep(waitTime);
 		}
+		System.out.println("\n\nPROCESSING DONE, WRITING TO FILE\n");
 		outputToFile(courses,"test");
 	}
 
@@ -57,7 +59,7 @@ public class CourseUMD {
 
 	public static void processTopicsList(ArrayList<String> links) {
 		try {
-			Document doc = Jsoup.connect("https://ntst.umd.edu/soc/201508").get();
+			Document doc = Jsoup.connect("https://ntst.umd.edu/soc/"+yearNum).get();
 			Element content = doc.getElementById("course-prefixes-page");
 			Elements linkTags = content.getElementsByTag("a");	
 			for (Element linkElement: linkTags) {
@@ -138,7 +140,7 @@ public class CourseUMD {
 			if (genEdArrayList.contains(e.text()))
 				genEds.add(e.text());
 		}
-		link="https://ntst.umd.edu/soc/search?courseId="+courseNumber+"&sectionId=&termId=201508&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on";
+		link="https://ntst.umd.edu/soc/search?courseId="+courseNumber+"&sectionId=&termId="+yearNum+"&_openSectionsOnly=on&courseLevelFilter=ALL&instructor=&teachingCenter=ALL&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&creditCompare=&credits=&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on";
 		//		numCore;
 		//		numGenEd;
 		System.out.println(toString());
